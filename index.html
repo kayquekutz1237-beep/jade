@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jade, você merece o mundo 💙</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!--
+    🎵 MÚSICA DE FUNDO
+    Para ativar:
+      1. Descomente o bloco <audio> abaixo
+      2. Descomente o botão #music-btn no body
+      3. Descomente o bloco de música no script.js
+
+  <audio id="musica" loop>
+    <source src="musica/musica.mp3" type="audio/mpeg" />
+  </audio>
+  -->
+</head>
+<body>
+
+  <!-- ── INTRO ── -->
+  <div id="intro" class="intro">
+    <div class="intro-content">
+      <p class="intro-sub">uma declaração especial para</p>
+      <h1 class="intro-name">Jade</h1>
+      <button onclick="entrar()">Abrir 💌</button>
+    </div>
+  </div>
+
+  <!-- ── MAIN ── -->
+  <main id="main" class="hidden">
+
+    <div id="hearts-container"></div>
+
+    <!--
+    <button id="music-btn" onclick="toggleMusica()" aria-label="Tocar ou pausar música">🎵</button>
+    -->
+
+    <!-- HERO — estilo Netflix, foto de fundo -->
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <!-- Coloque uma foto de vocês dois em fotos/capa.jpg para aparecer aqui -->
+      <img src="fotos/capa1.jpg" alt="" class="hero-bg slide active" />
+      <img src="fotos/capa2.jpg" alt="" class="hero-bg slide" />
+      <div class="hero-content">
+        <p class="hero-tag">💙 porque você merece saber o quanto é especial 💙</p>
+        <h1 class="hero-title">Jade,<br/><span class="hero-name">você merece o mundo</span></h1>
+        <p class="hero-sub">E eu quero ser a pessoa que te lembra disso todos os dias.</p>
+        <a href="#contador" class="hero-btn">Ver nossa história 💙</a>
+      </div>
+    </section>
+
+    <!-- CONTADOR EM TEMPO REAL -->
+    <section class="counter-section" id="contador">
+      <p class="counter-label">ao lado de quem eu mais quero</p>
+      <div class="counter">
+        <div class="counter-item"><span id="c-dias">0</span><small>dias</small></div>
+        <div class="counter-item"><span id="c-horas">0</span><small>horas</small></div>
+        <div class="counter-item"><span id="c-min">0</span><small>minutos</small></div>
+        <div class="counter-item"><span id="c-seg">0</span><small>segundos</small></div>
+      </div>
+      <p class="counter-since">juntos desde <strong id="data-inicio-label"></strong> 💙</p>
+    </section>
+
+    <!-- GALERIA -->
+    <section class="gallery-section">
+      <p class="section-tag">nossas memórias</p>
+      <h2 class="section-title">momentos que guardarei para sempre 📸</h2>
+      <div class="gallery">
+        <div class="photo-card large"><img src="fotos/foto1.jpg" alt="Nós dois" data-idx="0"/></div>
+        <div class="photo-card large"><img src="fotos/foto2.jpg" alt="Nós dois" data-idx="1"/></div>
+        <div class="photo-card small"><img src="fotos/foto3.jpg" alt="Nós dois" data-idx="2"/></div>
+        <div class="photo-card small"><img src="fotos/foto4.jpg" alt="Nós dois" data-idx="3"/></div>
+      </div>
+      <p class="gallery-hint">coloque suas fotos em <code>fotos/</code> com os nomes foto1.jpg … foto4.jpg e capa1.jpg, capa2.jpg</p>
+    </section>
+
+    <!-- CARTA -->
+    <section class="letter-section">
+      <div class="letter">
+        <p class="letter-icon">💙</p>
+        <p class="letter-title">pra você, Jade</p>
+        <p>
+          Eu não sou muito bom com palavras. Nunca fui. Mas tem coisas que ficam pesadas demais
+          no peito quando a gente não fala, e eu não quero mais ficar guardando isso só pra mim.
+        </p>
+        <p>
+          Jade, eu sou grato. De verdade. Grato por cada mensagem, por cada momento, por cada
+          vez que você esteve presente de um jeito que eu nem esperava. Você chegou na minha vida
+          com uma leveza que eu não sabia que precisava, e desde então eu percebi o quanto eu
+          tinha de espaço pra ser preenchido por alguém como você.
+        </p>
+        <p>
+          Você é uma mulher de Deus. E isso não é só uma frase bonita — eu vejo isso em você.
+          No seu jeito de tratar as pessoas, na sua fé, na forma como você enfrenta as coisas
+          sem perder a doçura. Deus sabia o que estava fazendo quando colocou você no meu caminho,
+          e eu agradeço por isso todos os dias.
+        </p>
+        <p>
+          Escolher você foi a melhor escolha que eu já fiz. Não tenho dúvida nenhuma disso.
+          Em você eu encontrei alguém que me faz querer ser melhor, não por obrigação,
+          mas porque você merece o melhor de mim. E eu quero te dar isso.
+        </p>
+        <p>
+          Você merece um amor que não te faça duvidar. Que te olhe e enxergue tudo — os seus
+          sonhos, as suas inseguranças, a sua força, a sua fé — e escolha ficar. Eu quero ser
+          esse amor pra você.
+        </p>
+        <p>
+          Obrigado por existir do jeito que você existe. Obrigado por ser quem você é.
+          Eu te amo, Jade. Do fundo do coração. 💙
+        </p>
+        <p class="assinatura">com todo o meu amor, <strong>Eu 💙</strong></p>
+      </div>
+    </section>
+
+    <!-- BOTÃO TE AMO -->
+    <section class="love-section">
+      <p class="love-label">e isso nunca vai mudar...</p>
+      <button class="love-btn" onclick="explodir()">💙 Te Amo, Jade 💙</button>
+    </section>
+
+    <footer>feito com muito amor pra Jade 💙</footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
